@@ -26,6 +26,12 @@ app.use('/api/suppliers', supplierRoutes);
 // Error Handler Middleware
 app.use(errorHandler);
 
+app.get("/", (req, res) => {
+    res.send(
+      "<center><h1>Inventory management</h1><br>Get Api <a href=https://github.com/yashika277/inventory_management.git target=_blank>Repository :Inventory management</a></center>"
+    );
+  });
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
